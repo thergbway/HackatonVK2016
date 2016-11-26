@@ -4,12 +4,10 @@ import java.util.Arrays;
 import java.util.Random;
 
 import com.ruber.controller.dto.ExampleDto;
-import com.ruber.controller.dto.OrganizationPointInfo;
+import com.ruber.controller.dto.OrganizationPointInfoDto;
 import com.ruber.controller.dto.SearchOrganizationResponseDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,14 +33,13 @@ public class MainController {
             @RequestParam("spn_lat") Double spnLat,
             @RequestParam("spn_lon") Double spnLon
     ){
-        log.info("MainController.findOrganization search={}, lat={}, lon={}, spn_lat={}, spn_lon={}",
-                searchString, lat, lon, spnLat, spnLon);
+        log.info("MainController.findOrganization");
         String type = "biz";
 
-        OrganizationPointInfo op1 = new OrganizationPointInfo("точка на невском", "описание 1", "Невский 12",
-                "http://nevskij12.ru", "каждый день", "89112900042", 10.10, 11.11);
-        OrganizationPointInfo op2 = new OrganizationPointInfo("точка на садовой", "описание 2", "Садовая 44",
-                "http://sadovaja12.ru", "по выходным", "89122223344", 12.12, 13.13);
+        OrganizationPointInfoDto op1 = new OrganizationPointInfoDto("точка на невском", "описание 1", "Невский 12",
+                "http://nevskij12.ru", "каждый день", "89112900042", 59.9880207, 30.358890);
+        OrganizationPointInfoDto op2 = new OrganizationPointInfoDto("точка на садовой", "описание 2", "Садовая 44",
+                "http://sadovaja12.ru", "по выходным", "89122223344",59.9380207, 30.308890);
 
         return new SearchOrganizationResponseDto(searchString, 1, Arrays.asList(op1, op2));
     }

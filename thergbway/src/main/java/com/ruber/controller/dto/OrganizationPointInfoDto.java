@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrganizationPointInfo {
+public class OrganizationPointInfoDto {
     private String name;
     private String description;
     private String address;

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class SearchOrganizationResponseDto {
     private String request_string;
     private Integer closest_point;
-    private List<OrganizationPointInfo> organization_points;
+    private List<OrganizationPointInfoDto> organization_points;
 }

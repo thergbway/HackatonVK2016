@@ -1,0 +1,226 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "Attribution": {
+      "Sources": {
+        "twitter": {
+          "id": "twitter",
+          "author": {
+            "name": "Twitter",
+            "uri": "http://twitter.com"
+          }
+        },
+        "yandex": {
+          "id": "yandex",
+          "author": {
+            "name": "Яндекс",
+            "uri": "http://www.yandex.ru"
+          }
+        }
+      }
+    },
+    "ResponseMetaData": {
+      "SearchRequest": {
+        "request": "Автосервис, Москва, 2 Вязовский проезд 4а",
+        "results": 10,
+        "skip": 0,
+        "boundedBy": [
+          [
+            37.04842675,
+            55.43644829
+          ],
+          [
+            38.17590226,
+            56.04690124
+          ]
+        ]
+      },
+      "SearchResponse": {
+        "found": 16,
+        "Sort": {
+          "type": "distance"
+        },
+        "Point": {
+          "type": "Point",
+          "coordinates": [
+            37.59021866,
+            55.72397739
+          ]
+        },
+        "boundedBy": [
+          [
+            37.34133143,
+            55.53941064
+          ],
+          [
+            37.83910589,
+            55.90767221
+          ]
+        ],
+        "display": "multiple"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "CompanyMetaData": {
+          "id": "1192017469",
+          "name": "Автосервис РАСТО",
+          "nameHighlight": [
+            [
+              0,
+              9
+            ]
+          ],
+          "address": "Москва, 2-й Вязовский пр-д, 4а, стр. 1",
+          "addressHighlight": [
+            [
+              0,
+              6
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              12,
+              21
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              29,
+              30
+            ]
+          ],
+          "url": "http://www.автосервис-ювао.рф",
+          "Categories": [
+            {
+              "class": "auto",
+              "name": "Автосервис, автотехцентр",
+              "nameHighlight": [
+                [
+                  0,
+                  24
+                ]
+              ]
+            },
+            {
+              "class": "auto",
+              "name": "Шиномонтаж"
+            },
+          ],
+          "Phones": [
+            {
+              "type": "phone",
+              "formatted": "+7 (495) 778-44-45",
+              "country": "7",
+              "prefix": "495",
+              "number": "7784445",
+              "info": "секретарь"
+            }
+          ],
+          "Hours": {
+            "Availabilities": [
+              {
+                "Everyday": true,
+                "TwentyFourHours": true,
+                "Intervals": [
+                  {
+                    "from": "08:00:00",
+                    "to": "22:00:00"
+                  }
+                ]
+              },
+            ],
+            "text": "ежедневно, круглосуточно",
+            "tzOffset": 10800
+          },
+          "Geo": {
+            "precision": "exact"
+          },
+          "Features": [
+            {
+              "id": "car_brand",
+              "type": "enum",
+              "name": "марка автомобиля",
+              "values": [
+                {
+                  "id": "all_cars",
+                  "value": "легковые"
+                }
+              ]
+            },
+            {
+              "id": "basic_service",
+              "type": "bool",
+              "name": "базовое сервисное обслуживание",
+              "value": true
+            },
+            {
+              "id": "labor_time",
+              "type": "text",
+              "name": "нормочас",
+              "value": "800–1000 руб"
+            },
+            {
+              "id": "payment_by_credit_card",
+              "type": "bool",
+              "name": "оплата картой",
+              "value": true
+            }
+          ],
+          "Snippet": {
+            "FeatureSet": [
+              "all_cars",
+              "basic_service"
+            ]
+          },
+          "Links": [
+            {
+              "type": "social",
+              "aref": "#youtube",
+              "href": "http://www.youtube.com/channel/UCkNjTx8Dfa2w0M4fmNC8gXg"
+            },
+            {
+              "type": "social",
+              "aref": "#twitter",
+              "href": "http://twitter.com/toosago"
+            }
+          ]
+        },
+        "description": "Москва, 2-й Вязовский пр-д, 4а, стр. 1",
+        "name": "Автосервис РАСТО",
+        "boundedBy": [
+          [
+            37.76382707,
+            55.71907951
+          ],
+          [
+            37.76792339,
+            55.72139163
+          ]
+        ],
+        "attributions": [
+          "#yandex"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.765877,
+          55.720238
+        ]
+      }
+    },
+    ...
+  ]
+}

@@ -17,9 +17,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>4.1.6.RELEASE</spring.version>
 
-        <jar.main.class>com.ruber.Main</jar.main.class>
+        <jar.main.class>com.ruber.EmbeddedJetty</jar.main.class>
         <jar.with.dependencies.name>hack_vk_backend</jar.with.dependencies.name>
         <jar.without.dependencies.name>hack_vk_backend_without_dependencies</jar.without.dependencies.name>
+
+        <jetty.version>8.1.5.v20120716</jetty.version>
+        <jetty.jsp.version>8.1.4.v20120524</jetty.jsp.version>
 
         <!--<resources.to.include>res/*</resources.to.include>-->
         <!--<configuration.files.to.include>cfg/*</configuration.files.to.include>-->
@@ -38,6 +41,7 @@
     </repositories>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -62,17 +66,17 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>2.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet.jsp</groupId>-->
+            <!--<artifactId>jsp-api</artifactId>-->
+            <!--<version>2.2</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>javax.servlet.jsp.jstl</groupId>
-            <artifactId>jstl-api</artifactId>
-            <version>1.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet.jsp.jstl</groupId>-->
+            <!--<artifactId>jstl-api</artifactId>-->
+            <!--<version>1.2</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -91,6 +95,7 @@
             <artifactId>hibernate-validator</artifactId>
             <version>5.1.3.Final</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -110,35 +115,35 @@
             <version>2.4</version>
         </dependency>
 
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>1.3.1</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>commons-fileupload</groupId>-->
+            <!--<artifactId>commons-fileupload</artifactId>-->
+            <!--<version>1.3.1</version>-->
+        <!--</dependency>-->
+<!---->
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-entitymanager</artifactId>-->
+            <!--<version>5.1.0.Final</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-core</artifactId>-->
+            <!--<version>5.1.0.Final</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.transaction</groupId>-->
+            <!--<artifactId>jta</artifactId>-->
+            <!--<version>1.1</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>jta</artifactId>
-            <version>1.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-orm</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>postgresql</groupId>
@@ -146,31 +151,54 @@
             <version>9.1-901-1.jdbc4</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>com.github.fge</groupId>-->
+            <!--<artifactId>json-schema-validator</artifactId>-->
+            <!--<version>2.2.6</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.hamcrest</groupId>-->
+            <!--<artifactId>hamcrest-all</artifactId>-->
+            <!--<scope>test</scope>-->
+            <!--<version>1.3</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.mockito</groupId>-->
+            <!--<artifactId>mockito-core</artifactId>-->
+            <!--<version>1.10.19</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>4.12</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
+        <!-- JETTY DEPENDENCIES -->
         <dependency>
-            <groupId>com.github.fge</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>2.2.6</version>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>${jetty.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
-            <scope>test</scope>
-            <version>1.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>1.10.19</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -225,47 +253,45 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.3</version>
-                <configuration>
-                    <createDependencyReducedPom>false</createDependencyReducedPom>
-                    <finalName>${jar.with.dependencies.name}</finalName>
-                    <transformers>
-                        <transformer
-                                implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>${jar.main.class}</mainClass>
-                        </transformer>
-                    </transformers>
-                    <filters>
-                        <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>META-INF/*.SF</exclude>
-                                <exclude>META-INF/*.DSA</exclude>
-                                <exclude>META-INF/*.RSA</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <finalName>${jar.with.dependencies.name}</finalName>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>${jar.main.class}</mainClass>
+                                </transformer>
+                            </transformers>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
 
-        <!--<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>-->
-        <!--<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>-->
-        <!--<resources>-->
-            <!--<resource>-->
-                <!--<directory>./</directory>-->
-                <!--<includes>-->
-                    <!--<include>${resources.to.include}</include>-->
-                    <!--<include>${configuration.files.to.include}</include>-->
-                <!--</includes>-->
-            <!--</resource>-->
-        <!--</resources>-->
+        <resources>
+            <resource>
+                <targetPath>webapp</targetPath>
+                <directory>src/main/webapp</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
     </build>
 </project>

@@ -137,6 +137,8 @@ public class MainController {
     public GroupSettingsDto getGroupSettings(
             @RequestParam("group_id") Integer groupId
     ) {
+        log.info("MainController.getGroupSettings");
+
         GroupSettingsDto dto = new GroupSettingsDto();
 
         dto.setGroup_id(groupId);
@@ -144,6 +146,7 @@ public class MainController {
         dto.setCoupon_title(dao.getCouponTitle(groupId));
         dto.setCoupon_content(dao.getCouponContent(groupId));
 
+        log.info("GROUP SETTINGS = " + dto);
         return dto;
     }
 
@@ -154,6 +157,8 @@ public class MainController {
             @RequestParam("coupon_title") String couponTitle,
             @RequestParam("coupon_content") String couponContent
     ) {
+        log.info("MainController.setGroupSettings");
+
         dao.setGroupName(groupId, groupName);
         dao.setCouponTitle(groupId, couponTitle);
         dao.setCouponContent(groupId, couponContent);
@@ -161,6 +166,8 @@ public class MainController {
 
     @RequestMapping(value = "/coupon", method = GET)
     public String generateCoupon() {
+        log.info("MainController.generateCoupon");
+
         return dao.nextCoupon();
     }
 
@@ -168,6 +175,8 @@ public class MainController {
     public Integer killCoupon(
             @RequestParam("code") Integer code
     ) {
+        log.info("MainController.killCoupon");
+
         if (dao.killCoupon(code))
             return 1;
         else

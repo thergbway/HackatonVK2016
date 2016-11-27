@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class OrganizationPointInfoDto {
     private String name;
-    private String description;
+    private String uberLink;
     private String address;
-    private String url;
     private String availability;
     private String phone;
     private Double lat;

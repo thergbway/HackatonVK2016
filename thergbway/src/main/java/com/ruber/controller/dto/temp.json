@@ -1,0 +1,100 @@
+{
+  "request_string": "Евразия",
+  "closest_point": 6,
+  "left_up_lat": 59.918075,
+  "left_up_lon": 30.3223,
+  "right_down_lat": 59.939041,
+  "right_down_lon": 30.31649,
+  "organization_points": [
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.923482&dropoff[longitude]=30.293123",
+      "address": "Санкт-Петербург, ул. Союза печатников, 10",
+      "availability": "пн-чт 12:00–23:00; пт,сб 12:00–2:00; вс 12:00–23:00",
+      "phone": "+7 (812) 714-82-03",
+      "lat": 59.923482,
+      "lon": 30.293123
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.84328&dropoff[longitude]=30.248273",
+      "address": "Санкт-Петербург, просп. Ветеранов, 36",
+      "availability": "ежедневно, 11:00–5:00",
+      "phone": "+7 (812) 756-47-10",
+      "lat": 59.84328,
+      "lon": 30.248273
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.850531&dropoff[longitude]=30.32071",
+      "address": "Санкт-Петербург, Московский просп., 195",
+      "availability": "ежедневно, 11:00–5:00",
+      "phone": "+7 (812) 371-90-78",
+      "lat": 59.850531,
+      "lon": 30.32071
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.852384&dropoff[longitude]=30.301055",
+      "address": "Санкт-Петербург, Ленинский просп., 160",
+      "availability": "пн 12:00–23:00; вт-сб 12:00–5:00; вс 12:00–23:00",
+      "phone": "+7 (812) 677-32-95",
+      "lat": 59.852384,
+      "lon": 30.301055
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.918075&dropoff[longitude]=30.3223",
+      "address": "Санкт-Петербург, просп. Загородный, 64",
+      "availability": "пн-чт 11:00–23:00; пт,сб 11:00–2:00; вс 11:00–23:00",
+      "phone": "+7 (812) 316-56-83",
+      "lat": 59.918075,
+      "lon": 30.3223
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=60.034978&dropoff[longitude]=30.418186",
+      "address": "Санкт-Петербург, Гражданский просп., 116к1",
+      "availability": "пн-чт 12:00–0:00; пт,сб 12:00–2:00; вс 12:00–0:00",
+      "phone": "+7 (812) 290-52-25",
+      "lat": 60.034978,
+      "lon": 30.418186
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.934601&dropoff[longitude]=30.33723",
+      "address": "Санкт-Петербург, ул. Садовая М, 3",
+      "availability": "ежедневно, 12:00–0:00",
+      "phone": "+7 (812) 310-75-66",
+      "lat": 59.934601,
+      "lon": 30.33723
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.941231&dropoff[longitude]=30.272902",
+      "address": "Санкт-Петербург, В.О., Средний просп., 46",
+      "availability": "ежедневно, 11:00–5:00",
+      "phone": "+7 (812) 325-26-54",
+      "lat": 59.941231,
+      "lon": 30.272902
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=59.92459&dropoff[longitude]=30.338152",
+      "address": "Санкт-Петербург, просп. Загородный, 21/23",
+      "availability": "пн-чт 12:00–23:00; пт,сб 12:00–2:00",
+      "phone": "+7 (812) 921-51-40",
+      "lat": 59.92459,
+      "lon": 30.338152
+    },
+    {
+      "name": "Евразия",
+      "uberLink": "uber://?action=setPickup&dropoff[latitude]=60.697811&dropoff[longitude]=28.77585",
+      "address": "Ленинградская обл., Выборгский р-н, Выборг, Южный пос., просп. Победы, 16а",
+      "availability": "пн-чт 11:00–2:00; пт,сб 11:00–5:00; вс 11:00–2:00",
+      "phone": "+7 (81378) 9-51-21",
+      "lat": 60.697811,
+      "lon": 28.77585
+    }
+  ]
+}

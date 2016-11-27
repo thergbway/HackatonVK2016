@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="app.js"></script>
+  <script>
+    var APP_SETTINGS = {}
+    APP_SETTINGS.URL = window.location.href;
+  </script>
+  <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+</head>
+<body ng-controller="mainController">
+    <div class="wrap">
+      <div class="wrap__coordinates">
+        <div class="pad"><span>{{closest_text}}</span></div><br />
+        <div class="pad"><span class="coordinates__address">{{point_address}}</span></div><br />
+        <div class="pad" ng-if="!markSelected"><span>Выберете точку на карте</span></div>
+        <div class="pad" ng-if="markSelected"><span class="coordinates__runtime"></span> {{run_time}}</span>&nbsp;&nbsp;&nbsp;<span class="coordinates__time"><b>&#149;</b> {{work_time}}</span></div><br />
+        <div class="pad" ng-if="markSelected"><a href="tel:{{phone}}" class="btn btn-default" type="button"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> {{phone}}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{uber_link}}" target="_blank" class="btn btn-default btn-uber" type="button">Вызвать Uber</a></div><br />
+      </div>
+      <div id="map"></div>
+      <div class="wrap__contacts">
+        <div class="coupon" ng-style="{ 'visibility' : (coupon_title) ? 'visible' : 'hidden' }">
+          <h4>{{coupon_title}}</h4>
+          <p>{{coupon_content}}</p><br />
+          <p><a href="#!" target="_blank" class="btn btn-default btn-ghost" id="coupon_activate" type="button">АКТИВИРОВАТЬ КУПОН</a></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var activated = false;
+      var coupon = document.querySelector('.coupon');
+      var coupon_activate_btn = coupon.querySelector('#coupon_activate');
+      if(coupon) {
+        coupon.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+        coupon_activate_btn.addEventListener('click', function(e) {
+          this.classList.add('into-code');
+          if(!activated) {
+            this.innerHTML = Math.floor(Math.random()*9000) + 1000;
+            activated = !activated;
+          }
+          e.preventDefault();
+          e.stopPropagation();
+          e.cancelBubble;
+          return false;
+        });
+      }
+    </script>
+</body>
+</html>

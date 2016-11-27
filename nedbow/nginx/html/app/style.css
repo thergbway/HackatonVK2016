@@ -1,0 +1,108 @@
+body, html {
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.wrap__coordinates {
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 80%, rgba(255,255,255,.1));
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 50px 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.wrap__contacts {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 70px 0 30px 0;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+.coordinates__address {
+  font-size: 20px;
+}
+
+.coordinates__runtime {
+  color: #999;
+}
+
+.coordinates__time {
+  color: #6fca77;
+}
+
+.coupon {
+  position: fixed;
+  width: 90%;
+  background: #3399FF;
+  height: 40vh;
+  z-index: 10;
+  bottom: -30.5vh;
+  left: 5%;
+  color: #FFFFFF;
+  line-height: 13px;
+  border-radius: 8px 8px 0px 0px;
+  -webkit-transition-property: top, bottom;
+  -webkit-transition-duration: 0.5s;
+}
+
+.coupon.active {
+  bottom: 0;
+}
+
+.pad {
+  margin-bottom: -10px;
+}
+
+.btn-uber {
+  padding-right: 35px;
+  background-color: #09091a;
+  border: 1px solid #09091a;
+  background-image: url('/img/uber.png');
+  background-size: 17%;
+  background-repeat: no-repeat;
+  background-position: 94% 50%;
+  color: #fff;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  color: #FFFFFF;
+}
+
+.btn-ghost.into-code {
+  border: none;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.btn-ghost.into-code:hover {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-ghost:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  color: #3399FF;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
